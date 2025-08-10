@@ -355,7 +355,7 @@ def promote(client, resp, operation_json):
 
     response_class = operation_json['responseClass']
     is_list = False
-    m = re.match('''List\[(.*)\]''', response_class)
+    m = re.match(r'List\[(.*)\]', response_class)
     if m:
         response_class = m.group(1)
         is_list = True
